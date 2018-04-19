@@ -1,0 +1,74 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="layout :: htmlhead" th:with="title='Hello'">
+</head>
+<body>
+<div th:replace="layout :: navbar">(navbar)</div>
+<div th:replace="layout :: #sidebar-left">(sidebar-left)</div>
+
+<div class="container" style="
+ position: fixed;margin-left: 20%;margin-right: 20%;width: 70%;
+">
+    <div class="starter-template">
+        <h1>Home</h1>
+        <p class="lead" th:text="${greeting}">(greeting)</p>
+        <p>Recent Activities and Logs <span th:text="${currentTime}">(time)</span></p>
+        <title> Ecom Gateway</title>
+        <head>
+            <link rel="stylesheet" href="../../resources/static/css/bootstrap.min.css"/>
+            <script src="../../resources/static/js/bootstrap.min.js"></script>
+        </head>
+
+        <body>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Activity Type</th>
+                <th scope="col">Platform</th>
+                <th scope="col">Execution</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Result</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+            </tr>
+            </tbody>
+        </table>
+
+        </body>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
